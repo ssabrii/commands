@@ -1,14 +1,13 @@
-language: java
+before_install: 
+  - "git config --global user.email \"travis-ci@travis-ci.com\""
+  - "git config --global user.name \"Travis CI\""
+cache: 
+  directories: "-'$HOME/.m2/repository"
 dist: trusty
-jdk:
+git: 
+  submodules: false
+jdk: 
   - oraclejdk8
   - openjdk8
   - openjdk11
-git:
-  submodules: false
-before_install:
-  - git config --global user.email "travis-ci@travis-ci.com"
-  - git config --global user.name "Travis CI"
-cache:
-  directories:
-    - '$HOME/.m2/repository
+language: java
