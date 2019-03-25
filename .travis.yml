@@ -3,7 +3,7 @@ before_install:
   - "git config --global user.name \"Travis CI\""
 cache: 
   directories: "-'$HOME/.m2/repository"
-dist: trusty
+dist: xenial
 git: 
   submodules: false
 jdk: 
